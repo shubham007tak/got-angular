@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngIf="currentCard">
+      <ul class="list-group">
+        <!-- characterdata -->
+        <li class="list-group-item">Name:{{currentCard.name}}</li>
+        <li class="list-group-item list-group-item-info">Gender:{{currentCard.gender}}</li>
+        <li class="list-group-item list-group-item-info">Culture:{{currentCard.culture}}</li>
+        <li class="list-group-item list-group-item-info">Born:{{currentCard.born}}</li>
+        <li class="list-group-item list-group-item-info">Titles:{{currentCard.titles}}</li>
+        <li class="list-group-item list-group-item-info">Played By:{{currentCard.playedBy}}</li>
+      </ul>
+      <br />
+      <button type="button" class="btn btn-info" (click)="goBack()">Go Back</button>
+    </div>
+  </div>
+</div>

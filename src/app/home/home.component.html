@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row" *ngIf="allItems.length>0" style="text-align:center">
+
+    <div class="col-xl-3 col-lg-4 col-sm-6" *ngFor="let item of allItems">
+      <div *ngIf="item.url.indexOf('character')!=-1" class="card cardContainer" style="height:450px;width: 33rem;border:5px solid blue">
+        <img class="card-img-top" src="../../got/assets/img/character.jpg" alt="Card image cap">
+        <div class="card-body" style="text-align:left">
+          <h5 class="card-title">Character<br />Character Name:{{item.name}}</h5>
+          <p class="card-text">Gender:{{item.gender}}<br />
+            Born:{{item.born}}<br />
+            Culture:{{item.culture}}
+            Url:{{item.url}}
+          </p>
+          <a [routerLink]="['/card',item.url]" class="btn btn-primary">More</a>
+        </div>
+      </div>
+      <br />
+
+      <div *ngIf="item.url.indexOf('book')!=-1" class="card cardContainer" style="height:450px;width: 33rem;border:5px solid red">
+        <img class="card-img-top" src="../../got/assets/img/book.jpg" alt="Card image cap">
+        <div class="card-body"style="text-align:left">
+            <h5 class="card-title">Book<br />Book Name:{{item.name}}</h5>
+            <p class="card-text">publisher:{{item.publisher}}<br />
+              Author:{{item.authors.toString()}}<br />
+              Country:{{item.country}}
+            </p>
+          <a [routerLink]="['/book',item.url]" class="btn btn-primary">More</a>
+        </div>
+      </div>
+
+      <div *ngIf="item.url.indexOf('house')!=-1" class="card cardContainer" id="house" style="height:450px;width: 33rem;border:5px solid green">
+        <img class="card-img-top" src="../../got/assets/img/house.jpg" alt="Card image cap">
+        <div class="card-body"style="text-align:left">
+          <h5 class="card-title">House<br />House Name:{{item.name}}</h5>
+          <p class="card-text">Region:{{item.region}}<br />
+            Coat of Arms:{{item.coatOfArms}}<br />
+            Words:{{item.words}}
+          </p>
+          <a [routerLink]="['/house',item.url]" class="btn btn-primary">More</a>
+        </div>
+      </div>
+      <br />
+    </div>
+    <br>
+  </div>
+</div>
+
+

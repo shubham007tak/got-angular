@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" *ngIf="bookData">
+            <ul class="list-group">
+                <li class="list-group-item">Name:{{bookData.name}}</li>
+                <li class="list-group-item list-group-item-info">Isbn:{{bookData.isbn}}</li>
+                <li class="list-group-item list-group-item-info">Author's:{{bookData.authors.toString()}}</li>
+                <li class="list-group-item list-group-item-info">Number Of Pages:{{bookData.numberOfPages}}</li>
+                <li class="list-group-item list-group-item-info">Publisher:{{bookData.publisher}}</li>
+                <li class="list-group-item list-group-item-info">Country:{{bookData.country}}</li>
+            </ul>
+            <br />
+            <button type="button" class="btn btn-info" (click)="goBack()">Go Back</button>
+        </div>
+    </div>
+</div>

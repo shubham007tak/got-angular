@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" *ngIf="houseData">
+            <ul class="list-group">
+                <li class="list-group-item">Name:{{houseData.name}}</li>
+                <li class="list-group-item list-group-item-info">Region:{{houseData.region}}</li>
+                <li class="list-group-item list-group-item-info">Coat Of Arms:{{houseData.coatOfArms}}</li>
+                <li class="list-group-item list-group-item-info">Words:{{houseData.words}}</li>
+                <li class="list-group-item list-group-item-info">Titles:{{houseData.titles.toString()}}</li>
+                <li class="list-group-item list-group-item-info">Founded:{{houseData.founded}}</li>
+            </ul>
+            <br />
+            <button type="button" class="btn btn-info" (click)="goBack()">Go Back</button>
+
+        </div>
+    </div>
+</div>
